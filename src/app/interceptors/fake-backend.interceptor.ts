@@ -30,7 +30,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
               case url.search("/catalog/")!==-1 && method=="GET":          
                 let id = url.substr(url.search("/catalog/")+9);
-                return self.http.get("/assets/catalog.json")
+                return self.http.get("assets/catalog.json")
                  .pipe(                  
                   map(response => new HttpResponse({body: (response as any[]).find(elem => elem.id==id), status: 200})
                     
@@ -38,7 +38,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 );
 
               case url.endsWith("/catalog") && method=="GET":          
-                return self.http.get("/assets/catalog.json")
+                return self.http.get("assets/catalog.json")
                  .pipe(                  
                   map(response => new HttpResponse({body:response, status: 200})
                   )
@@ -72,7 +72,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
               
               case url=="https://mail.ru/" && method=="GET":          
-                return self.http.get("/assets/test.json")
+                return self.http.get("assets/test.json")
                  .pipe(
                   //switchMap(response => of(new HttpResponse({body:response, status: 200}))
                   map(response => new HttpResponse({body:response, status: 200})

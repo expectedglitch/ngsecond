@@ -19,9 +19,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  loginPageCheck() {
-    console.log(this.router.url)
-    // this.route.paramMap
-    //   .subscribe(params => console.log(params))
-  }
+  // loginPageCheck() {
+  //   console.log(this.router.url)
+  // }
 }
