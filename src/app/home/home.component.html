@@ -4,7 +4,7 @@
 
 <ul>
     <!-- <li><a routerLinkActive="active" routerLink="/catalog">Catalog</a></li> -->
-    <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a></li>
+    <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home_1</a></li>
     <li *ngIf="service.isLoggedIn() && service.getCurrentUser.roles.includes('admin')"><a routerLinkActive="active" routerLink="/admin">Admin123</a></li>
     <li *ngIf="!service.isLoggedIn() && router.url!=='/login'"><a routerLink="/login">Login</a></li>
     <li *ngIf="service.isLoggedIn()"><a routerLinkActive="active" (click)="logout()">Logout</a></li>
