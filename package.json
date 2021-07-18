@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build",
+    "ppppostinstall": "ng build",
     "deploy:gh": "ng build --base-href=https://expectedglitch.github.io/ngfirst/ --output-path=dist && ngh",
     "deploy:gh_my": "ng build --base-href=https://expectedglitch.github.io/ngsecond/ --output-path=dist && git add dist -f && git commit -m 'next_commit...' && git subtree push --prefix dist origin_2 test_branch",
     "deploy:fb": "ng build --output-path=dist && firebase deploy"
@@ -33,6 +33,8 @@
     "zone.js": "~0.11.4"    
   },
   "devDependencies": {
+    "@angular/cli": "~12.0.3",
+    "@angular/compiler-cli": "~12.0.3",
     "@angular-devkit/build-angular": "~12.0.3",    
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
@@ -41,7 +43,8 @@
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0"
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "typescript": "~4.2.3"
   },
   "engines":{
     "node": "14.17.3",
