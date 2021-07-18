@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "p11111ostinstall": "ng build",
+    "heroku-postbuild": "ng build",
     "deploy:gh": "ng build --base-href=https://expectedglitch.github.io/ngfirst/ --output-path=dist && ngh",
     "deploy:gh_my": "ng build --base-href=https://expectedglitch.github.io/ngsecond/ --output-path=dist && git add dist -f && git commit -m 'next_commit...' && git subtree push --prefix dist origin_2 test_branch",
     "deploy:fb": "ng build --output-path=dist && firebase deploy"
